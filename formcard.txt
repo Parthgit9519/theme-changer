@@ -1,0 +1,219 @@
+FORM CARD
+
+
+html=>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Application</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        width: 100%;
+        font-family: "Segoe UI", sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 40px 20px;
+        background: #f6f6f6;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 300px;
+        padding: 20px;
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        margin-bottom: 40px;
+      }
+
+      form h3 {
+        text-align: center;
+        margin-bottom: 10px;
+        color: #333;
+      }
+
+      input {
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        padding: 8px;
+        transition: border-color 0.2s;
+      }
+
+      input:focus {
+        outline: none;
+        border-color: #4a90e2;
+      }
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  width: 100%;
+}
+
+.main {
+  width: 280px;
+  background: linear-gradient(135deg, #ffffff, #f1f5f9);
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  padding: 24px 20px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Segoe UI", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.main::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 120px;
+  height: 120px;
+  background: #4f46e5;
+  opacity: 0.1;
+  border-radius: 50%;
+}
+
+.main:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.profile {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.profile img {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  border: 4px solid #4f46e5;
+  object-fit: cover;
+  object-position: top;
+  box-shadow: 0 0 10px rgba(79, 70, 229, 0.2);
+}
+
+.texts {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: center;
+  color: #1e293b;
+}
+
+.texts h4 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.texts p {
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.4;
+}
+
+.texts span {
+  font-size: 13px;
+  font-weigh
+
+    </style>
+
+
+
+
+  </head>
+  <body>
+    <form>
+      <h3>JOB APPLICATION FORM</h3>
+      <input type="text" name="profilePic" placeholder="Profile pic URL" />
+      <input type="text" name="fullName" placeholder="Name" />
+      <input type="number" name="age" placeholder="Age" />
+      <input type="text" name="post" placeholder="Post applied for" />
+      <input type="text" name="skills" placeholder="Skills" />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <div class="container" id="cardContainer"></div>
+
+    <script src="script2.js"></script>
+  </body>
+</html>
+
+
+
+JS =>//////////////////
+
+
+let form = document.querySelector("form");
+let inputs = document.querySelectorAll("input");
+let container = document.querySelector(".container");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  let main = document.createElement("main");
+  main.classList.add("main");
+
+  let profile = document.createElement("profile");
+  profile.classList.add("profile");
+
+  let img = document.createElement("img");
+  img.src = inputs[0].value;
+  let cardDets = document.createElement("div");
+  cardDets.classList.add("texts");
+
+  let h2 = document.createElement("h2");
+  h2.textContent = inputs[1].value;
+
+  let h3 = document.createElement("h3");
+  h3.textContent = inputs[2].value;
+
+  let h4 = document.createElement("h4");
+  h4.textContent = inputs[3].value;
+
+  let h5 = document.createElement("h5");
+  h5.textContent = inputs[4].value;
+
+  container.appendChild(main);
+  profile.appendChild(img);
+  main.appendChild(profile);
+  main.appendChild(cardDets);
+  cardDets.appendChild(h2);
+  cardDets.appendChild(h3);
+  cardDets.appendChild(h4);
+  cardDets.appendChild(h5);
+
+  inputs.forEach(function (inp) {
+    if (inp.type !== "submit") {
+      inp.value = "";
+    }
+  });
+});
+
+
+
+

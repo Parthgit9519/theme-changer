@@ -1,0 +1,88 @@
+FORM VALIDAION=>
+
+
+HTML........//=>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="form">
+      <input style="font-size: 20px" type="text" placeholder="name" id="inp" />
+      <input
+        style="font-size: 20px"
+        type="text"
+        placeholder="number"
+        id="inp1"
+      />
+      <input
+        style="font-size: 20px"
+        id="inp2"
+        type="text"
+        placeholder="gmail"
+      />
+      <input style="font-size: 20px" type="text" id="url" placeholder="url" />
+      <input type="submit" id="sub" />
+      <h2 class="text"></h2>
+    </form>
+
+    <script src="script2.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+JS=>......................
+
+let form = document.querySelector("#form");
+let inpName = document.querySelector("#inp");
+let inpNumber = document.querySelector("#inp1");
+let gmail = document.querySelector("#inp2");
+let url = document.querySelector("#url");
+let sub = document.querySelector("#sub");
+let pattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+let head = document.querySelector(".text");
+
+form.addEventListener("submit", function (dets) {
+  dets.preventDefault();
+  if (inpName.value === "") {
+    alert("name blank");
+  } else {
+    head.textContent = inpName.value;
+  }
+
+  if (inpNumber.value.length !== 10) {
+    alert("invalid");
+  } else {
+    head.textContent = inpNumber.value;
+  }
+
+  if (!pattern.test(gmail.value)) {
+    alert("Please enter a valid Gmail address");
+  } else {
+    head.textContent = gmail.value;
+  }
+
+  if (!url.value.includes("https://")) {
+    alert("invalid url");
+  } else {
+    head.textContent = url.value;
+  }
+  //     let text = document.querySelector(".text").textContent = inpName.value
+  // let text1 = document.querySelector(".text").textContent = inpNumber.value
+
+  inpName.value = "";
+  inpNumber.value = "";
+  gmail.value = "";
+  url.value = "";
+});

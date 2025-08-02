@@ -1,0 +1,64 @@
+
+
+🔹 Basic Array Creation & Access
+
+Ek array banao jisme 5 fruits ho. 3rd fruit ko print karo.✔
+
+Ek array banao jisme 3 numbers ho. Unka sum print karo.✔
+
+Ek array me se first aur last element print karo.✔
+
+Ek array banao jisme mixed types (number, string, boolean) ho.✔
+
+Check karo ki ek element array me exist karta hai ya nahi using includes.✔
+
+🔹 Array Methods Practice (push, pop, shift, unshift)
+
+Ek array me 2 elements push karo, fir ek pop karo.✔
+
+Ek array me unshift se element add karo aur shift se remove karo.✔
+
+Ek array me 3 cities add karo. Fir last city ko remove karo aur print karo.✔
+
+Array ki length print karo after push and pop.✔
+
+Ek empty array banao aur usme step by step push karke 4 names daalo.✔
+
+🔹 Looping Through Arrays
+
+Ek array banao jisme 1 se 5 tak ke numbers ho, unko for loop se print karo.✔
+
+Ek array me se saare odd numbers print karo.✔
+
+Ek array of strings lo aur sabhi ko uppercase me print karo using loop.❌
+
+for...of loop se ek array ke elements ko print karo.✔
+
+Ek array ke elements ko reverse me print karo.✔
+
+🔹 Real-World Scenarios
+
+Ek array banao jisme students ke naam ho. Check karo agar “Parth” usme hai ya nahi.
+
+Ek array banao of prices, aur find karo sabse bada price.
+
+Ek array me se sabhi positive numbers print karo.
+
+Ek array banao jisme todo list items ho, ek naya item add karo end me.
+
+Ek array banao jisme movies ke naam ho. User se ek movie name lo, check karo wo hai ya nahi.
+
+🔹 Slightly Fun/Tricky❌
+
+Ek array banao jisme 10 tak ke numbers ho. Sirf even indexes print karo.
+
+Ek array ke har element ko 2 se multiply karke naye array me store karo.
+
+Ek array me se duplicates hatao manually (no Set).
+
+Ek array ko reverse karo without using .reverse().
+
+Ek array ko string me convert karo using .join().
+
+
+
